@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <title>Guess the password</title>
+<style>
+</style>
+<link rel="stylesheet" href="./cdn_modules/bootstrap@5.3.3/css/bootstrap.min.css">
+  <script src="//unpkg.com/systemjs@0.19.47/dist/system.js"></script>
+</head>
+
+<body>
+<div class="dropdown">
+    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+      Checkout my other projects/Social Media!
+    </button>
+    <ul class="dropdown-menu">
+      <li><a class="dropdown-item" href="https://youtube.com/@Ericbruhwhywhyhy">Youtube Channel</a></li>
+      <li><a class="dropdown-item" href="https://ericbruhwhywhyhy.github.io/clicker">Clicker</a></li>
+      <li><a class="dropdown-item" href="https://x.com/@Ericbruh12469">Twitter/X</a></li>
+    </ul>
+  </div>
+  <h3>Try and guess the correct upcoming chosen password!</h3>
+  
+  <h1>LOGIN</h1>
+  <input id="username" class ="input input-group-text" type="text" placeholder="Username...(literally anything lol">
+  <br>
+  <input class="input input-group-text" id="password" type="text" placeholder="Password...(cASe sEnSItIvE)">
+  <button class="btn btn-primary" type="button" id="submit" data-bs-toggle="modal" data-bs-target="#resultModal">Submit</button>
+
+
+  <div class="modal fade" id="resultModal" tabindex="-1" role="dialog" aria-labelledby="resultModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="ModalLabel">yes</h5>
+
+          </button>
+        </div>
+        <div class="modal-body">
+          yes
+        </div>
+        <div class="modal-footer">
+          <button type="button" id="close" class="btn btn-secondary" data-dismiss="modal" data-bs-toggle="modal" data-bs-target="#resultModal">Close</button>
+          <button type="button" id="restart" class="btn btn-primary">Restart</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="config.js"></script>
+  <script type="module" src="./cdn_modules/bootstrap@5.3.3/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
