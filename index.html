@@ -1,12 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <script src="./howler.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
   <title>PasswordGuessr</title>
 <style>
+#loginform{
+box-align: center;
+text-align: center;
+width: 50%;
+margin: auto;
+align-items: center;
+height: auto;
+}
+.input{
+display: table;
+margin-left: auto;
+margin-right: auto;
+
+}
+#load{
+  z-index: 1;
+  position: fixed;
+overflow-y: hidden;
+-webkit-text-fill-color: #FFFFFF;
+background:rgba(0, 0, 0, 0.1) url("https://source.unsplash.com/random/?nature") no-repeat fixed;
+background-size: cover;
+background-color: rgba(0, 0, 0, 0.6);
+background-blend-mode: darken;
+margin: 0;
+width: 100vw;
+height: 100%;
+background-size: cover;
+}
+.dropdown-menu{
+z-index: 0;
+}
 #username{
 -webkit-text-fill-color: #000000;
 }
@@ -22,11 +52,12 @@
 </style>
 <link rel="stylesheet" href="./cdn_modules/bootstrap@5.3.3/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://ericbruhwhywhyhy.github.io/css/style.css">
-  <script src="//unpkg.com/systemjs@0.19.47/dist/system.js"></script>
+
 </head>
 
 <body>
-<div class="dropdown">
+  <div scroll="no" id="load"><h1>LOADING... PLEASE WAIT</h1><h6>oh yeah you kinda need to interact with this page because of chrome BS lol</h6></div>
+  <div class="dropdown">
     <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
       Checkout my other projects/Social Media!
     </button>
@@ -36,34 +67,42 @@
       <li><a class="dropdown-item" href="https://x.com/@Ericbruh12469">Twitter/X</a></li>
     </ul>
   </div>
-  <h3>Try and guess the correct upcoming chosen password!</h3>
+  <div id="loginform">
+  <h3>Try and guess the upcoming chosen password!</h3>
   
   <h1>LOGIN</h1>
-  <input id="username" class ="input input-group-text" type="text" placeholder="Username...(literally anything lol">
+  <input id="username" class="justify-content-center input input-group-text" type="text" placeholder="Username...(literally anything lol">
   <br>
   <input class="input input-group-text" id="password" type="text" placeholder="Password...(cASe sEnSItIvE)">
   <button class="btn btn-primary" type="button" id="submit" data-bs-toggle="modal" data-bs-target="#resultModal">Submit</button>
   <button class="btn btn-primary" type="button" id="generate" data-bs-toggle="modal" data-bs-target="#resultModal">Forget your password?</button>
-
+  </div>
   <div class="modal fade" id="resultModal" tabindex="-1" role="dialog" aria-labelledby="resultModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title" id="ModalLabel">yes</h5>
-
+  
           </button>
         </div>
         <div class="modal-body">
           yes
         </div>
-        <div class="modal-footer">
+        <div id="yas" class="modal-footer">
           <button type="button" id="close" class="btn btn-secondary" data-dismiss="modal" data-bs-toggle="modal" data-bs-target="#resultModal">Close</button>
           <button type="button" id="restart" class="btn btn-primary">Restart</button>
         </div>
       </div>
     </div>
   </div>
-  <script src="./config.js"></script>
-  <script type="module" src="./cdn_modules/bootstrap@5.3.3/js/bootstrap.bundle.min.js"></script>
+  </div>
 </body>
+   <script src="howler.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.1.2/firebase.js"></script>
+      <script type="module" src="./main.js"></script>
+
+  <script type="module" src="./cdn_modules/bootstrap@5.3.3/js/bootstrap.bundle.min.js"></script>
 </html>
